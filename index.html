@@ -3,44 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
     <p>Hello, world! 我是永远处于黄金时代の金渐层。</p>
 
-    <h2>Bio</h2>
-    <p><a href="https://github.com/harvey-1au/rebirth-public">反脆弱的爱的天才</a>；<a href="https://github.com/harvey-1au/praxis-university-public">知行大学首任校长</a>；<a href="https://github.com/harvey-1au/literature-public">2077年诺贝尔文学奖得主</a>。</p>
+    <div id="main"></div>
 
-    <h2>大理想</h2>
-    <ol>
-      <li>1+：在Stanford University里读完《一個人的聖經》。</li>
-      <li>2+：和1+个平凡的女性结婚。</li>
-      <li>4+：生育2+个孩子。</li>
-      <li>14+：培育10+个学生。</li>
-      <li>35+：发表《风起》。</li>
-    </ol>
-
-    <h2>小目标</h2>
-    <ol>
-      <li>一个人过1+次除夕。</li>
-      <li>钓1条5+kg的鱼。</li>
-      <li>塞学圣地——京都巡礼。</li>
-      <li>看到『ONE PIECE』完结。</li>
-      <li>看到*****。</li>
-      <li>学会做365+道菜。</li>
-      <li>认识1000+个公民。</li>
-      <li>通关10+部“ゼルダの伝説”。</li>
-      <li>给上海交通大学 (闵行校区)捐1株银杏树。</li>
-      <li>散步里程数40075+km。</li>
-      <li>骑行里程数52700+km。</li>
-      <li>游泳里程数10000+km。</li>
-      <li>成为一席的演讲者。</li>
-      <li>在Harvard University做1+年访问学者。</li>
-      <li>在50岁退休之后开一家花店。</li>
-      <li>看365+次日出。</li>
-      <li>吃365+次具有当地特色的早餐。</li>
-      <li>看365+次日落。</li>
-      <li>在巴黎生活3+年。</li>
-      <li>骨灰按照6357:6378的比例撒入思源湖和致远湖。</li>
-    </ol>
+    <script>
+      fetch('main.md')
+        .then(response => response.text())
+        .then(text => {
+          document.getElementById('main-content').innerHTML = marked.parse(text);
+        });
+    </script>
   </body>
 </html>
