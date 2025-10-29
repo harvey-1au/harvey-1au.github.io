@@ -14,7 +14,7 @@
       fetch('main.md')
         .then(response => response.text())
         .then(text => {
-          document.getElementById('main-content').innerHTML = marked.parse(text);
+          document.getElementById('main').innerHTML = marked.parse(text);
         });
     </script>
   </body>
